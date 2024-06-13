@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pokemon Powerup Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 300px;
+      padding: 10px;
+    }
+    input[type="number"] {
+      width: 100px;
+    }
+    input[type="text"] {
+      width: 100px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    .inline {
+      display: flex;
+      align-items: center;
+    }
+    .inline label {
+      margin: 0 10px 0 0;
+    }
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Power-up Calculator</h1>
+  <label for="level">Current Level:</label>
+  <input type="number" id="level" min="1" max="50" step="0.5">
+  
+  <label for="iv">Current IV (Format: 15/15/15):</label>
+  <input type="text" id="iv">
+  
+  <label for="max-iv">Max IV:</label>
+  <input type="number" id="max-iv" value="1500">
+  
+  <div class="inline">
+    <label for="use-xl">Include Candy XL:</label>
+    <input type="checkbox" id="use-xl">
+  </div>
+  
+  <button id="calculate">Calculate</button>
+
+  <h2>Results</h2>
+  <p>Stardust: <span id="stardust"></span></p>
+  <p>Candy: <span id="candy"></span></p>
+  <p>Candy XL: <span id="candy-xl"></span></p>
+  <p>CP: <span id="cp"></span></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
